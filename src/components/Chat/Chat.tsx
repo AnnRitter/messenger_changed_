@@ -2,6 +2,7 @@ import { Message } from "../Message/Message";
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { TUser } from "../../App";
 import { HubConnection } from "@microsoft/signalr";
+import "./Chat.scss"
 
 export interface IChatProps {
     connection?: HubConnection,
@@ -51,7 +52,7 @@ export function InputPlace({
     }, []);
 
     return (
-        <div className="flex-horizontal space-between">
+        <div className="chat__input">
             <input
                 ref={inputRef}
                 // className={classNames('input')}
@@ -140,12 +141,12 @@ export function Chat({
     }, []);
 
     return (
-        <div className="wrap max flex-vertical">
+        <div className="chat__wrap">
             { 
                 selectedUser ? ( <h1 className="center">Чат c {selectedUser.name}</h1>)
                 : (<h1 className="center">Чат</h1>)
             }
-            <ul className="position-right flex-vertical flex-right">
+            <ul className="chat__messages">
                 {messages.map((message) => (
                     <Message
                         key={message.id}

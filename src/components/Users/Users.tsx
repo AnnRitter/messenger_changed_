@@ -1,6 +1,6 @@
-
 import { useMemo } from 'react';
 import { TUser, UserStatusConnetion } from "../../App";
+import "./Users.scss"
 
 // type User = {
 //     id: string,
@@ -31,9 +31,9 @@ export function User({user, onClick}: IUserProps) {
     const statusText = useMemo(() => getUserStatusText(user), [user.status]);
 
     return (
-        <div key={user.id}  className="flex-horizontal space-between">
+        <div key={user.id}  className="user__wrap">
             <li onClick={() => onClick && onClick(user)}>{user.name}</li>
-            <span className="status">{statusText}</span>
+            <span className="user__status">{statusText}</span>
         </div>
     );
 }
@@ -62,8 +62,8 @@ export function Users({
     */
      
     return (
-        <div className="wrap max">
-            <h1 className="center">Список пользователей</h1>  
+        <div className="users__wrap">
+            <h1 className="users__title">Список пользователей</h1>  
             <ul>  
                 {users ? users.map(
                     (user) => (

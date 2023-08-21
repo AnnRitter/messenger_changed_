@@ -1,0 +1,28 @@
+.chat {
+    &__wrap {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 8px;
+        padding: 24px;
+        width: 100%;
+        height: 90vh;
+    }
+
+    &__messages {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-align: right;
+        margin-left: auto;
+
+    }
+    &__input {
+        display: flex;
+        justify-content: space-between;
+        gap: 23px;
+
+    }
+}

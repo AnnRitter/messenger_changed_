@@ -97,14 +97,14 @@ li:not(:last-child) {
 input {
   border: none;
 }
-.wrap {
+/* .wrap {
   background-color: #fff;
   display: block;
   border-radius: 8px;
   padding: 24px;
-}
+} */
 
-.flex-horizontal {
+/* .flex-horizontal {
   display: flex;
   gap: 23px;
 }
@@ -125,12 +125,9 @@ input {
 .position-right {
   text-align: right;
   margin-left: auto;
-}
+} */
 
-.max { 
-  width: 100%;
-}
-.center {
+/* .center {
   text-align: center;
 }
 .dark {
@@ -148,7 +145,4 @@ input {
   background-color: var(--body-color);
   border-radius: 8px;
   width: fit-content;
-}
-.status {
-  font-size: 1.2rem;
-}
+} */

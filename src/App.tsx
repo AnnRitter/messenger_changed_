@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Chat } from './components/Chat/Chat';
 import { Users } from './components/Users/Users';
 import { HubConnectionBuilder, LogLevel, HttpTransportType, HubConnection } from "@microsoft/signalr";
-import classNames from 'classnames';
+// import classNames from 'classnames';
+import "./App.css"
 
 export enum UserStatusConnetion {
   Disconected,
@@ -130,7 +131,7 @@ function App() {
   }, []);
   
   return (
-    <div className={classNames("flex-horizontal", "gap")}>
+    <div className="app__wrap">
       <Users
         users={users}
         onUserClick={setSelectedUser}

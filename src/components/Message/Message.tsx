@@ -1,4 +1,5 @@
 import { MessageStatus, TMessage } from "../Chat/Chat";
+import "./Message.scss"
 
 export interface MessageProps {
     message: TMessage
@@ -17,9 +18,9 @@ export function Message({
     message
 }: MessageProps) {
     return (
-        <li className="message">
+        <li className="message__wrap">
             <span>{message.text}</span>
-            <div className="status">{getMessageStatusText(message)}</div>
+            <div className="message__status">{getMessageStatusText(message)}</div>
         </li>  
     );
 }
